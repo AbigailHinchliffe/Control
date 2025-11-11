@@ -5,7 +5,7 @@
 import random
 import pygame
 import sys
-from classes import *
+from Classes.classes import *
 import time
 
 pygame.init()
