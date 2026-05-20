@@ -1,33 +1,76 @@
 # Control
 
+A small Risk-like strategy game where three teams (Player, Neutral, AI) compete to control territories. The game cycles through Fortify, Attack and Defend phases.
 
-# How to Play:
-# Aim: Wipe out your opponent
-# The Game rotates in three phases: Fortify, Attack & Defend
+---
 
-# **Fortify Phase & Rules**
-# ---------------------
-# In this phase, you get allocated a certain number of troops dependant on how many continents you have conquered, and you get to place them onto any territories that you happen to own. You also get given a new card at random which you can collect, in order to spend on more troops later on in the game. 
-# You have access to the arrow buttons at the bottom of the screen to adjust how many troops you wish to place on your highlighted territory, but once you have placed down your troops, you cannot adjust this until the defend phase. *There is no time limit to this phase*
-# Once you have made your selections and the troop count has hit 0, you automatically go into your attack phase. *This is timed*
-# **Only** during the fortify phase, can you trade in cards, otherwise you keep your existing cards and will only be able to use them again for the next fortify phase.
+## 1. Project Title and Description
+- Project: Control
+- Description: Turn-based territory control game with troop placement, dice-based combat, and card mechanics.
+- Key features:
+  - Fortify, Attack and Defend phases
+  - Territory adjacency and troop transfers
+  - Card rewards and hand-ins for extra troops
+  - AI opponent and neutral territories
 
-# **Attack Phase & Rules**
-# ---------------------
-# In this phase, you have a timer, in which you can End pre-emptively if you wish to end your turn, otherwise, you can attack any neighbouring enemy territories as long as your territory holds 2 or more troops on it. To select, you click the button of both territories, which is updated and reflected in a notification box to the left of the screen. If you wish to change your selection, simply clicking another territory owned by you will override this.
-# You can choose how many troops you wish to allocate to an attacking army, and a series of dice rolls will determine the losses and gains made by your army.
-# *For the attacking army:*
-# If you attack with 2 troops, you will only get one dice roll, whereas the enemy gets 1 dice roll, so it is not recommended to battle with a low army. The Defending army caps out at 2 dice, whereas the attacker caps at 3. The Highest 2 dice rolled is what is used to determine the losses/gains of an army. So attacking with a larger army is statistically recommended.
-# Simply press the confirm button either until you have won the battle, or you wish to complete your attack.
+## 2. Installation and Setup Instructions
 
-# **Defend Phase & Rules**
-# ------------------------
-# This is also a timed phase, however you can only transfer troops at this time, the conditions for transferring troops are as follows:
-# You can only do one transfer per defend phase; So prioritise!
-# The two territories must be bordering & be owned by you
-# The territory you are transferring from cannot go below 1, if you attempt to transfer from one territory which only has 1 left, the game will not allow you.
+Prerequisites:
+- Windows (tested)
+- Python 3.8+ installed
+- pip available
 
+Clone the repository:
+```bash
+git clone https://github.com/AbigailHinchliffe/Control.git
+```
 
-# **Teams**
-# At game startup, there are 3 teams: Player, Neutral & AI
-# The Territories are divided equally at random, and only the player & AI can attack & defend, the neutral territories can only defend. Upon a fortify phase, however, all teams can add troops to their territories.
+Install dependencies (pygame required):
+```powershell
+# Windows PowerShell
+py -3 -m pip install pygame
+# or if using a venv:
+.\venv\Scripts\activate
+python -m pip install pygame
+```
+
+Run the project:
+```powershell
+py -3 NEA_main_project.py
+# or
+python NEA_main_project.py
+```
+
+Tip: In VS Code, select the interpreter that has pygame installed (Command Palette → Python: Select Interpreter).
+
+## 3. Usage Instructions
+- Start the game and follow on-screen prompts.
+- Fortify phase: place troops and optionally trade cards.
+- Attack phase: select attacker and defender territories, choose troop allocation, resolve combat with dice.
+- Defend (Fortify/Transfer) phase: transfer troops between adjacent owned territories (one transfer per defend phase).
+- Use arrow/plus-minus UI to change troop counts.
+- Screenshots/GIFs: add to /images or /docs and reference here for visual guidance.
+
+## 4. Project Structure and Technologies Used (Optional)
+- Files:
+  - NEA_main_project.py — main game loop and setup
+  - Classes/classes.py — game classes (Territory, MenuButton, Cards, etc.)
+  - Images/ — assets used by the game
+  - README.md — this file
+- Technologies:
+  - Python, pygame
+- Development tools:
+  - Visual Studio Code
+
+## 5. Known Issues or Limitations (Optional)
+- VS Code may show "pygame not found" if the selected interpreter doesn't have pygame installed; ensure the correct interpreter is selected.
+- Large images may impact performance on lower-end machines.
+- AI behavior and balancing may need improvements.
+
+## 6. Contribution Guidelines (Optional)
+- Fork → create a feature branch → submit PR.
+- Keep changes focused and add tests where applicable.
+
+## 7. Contact Information
+- Author: Abigail Hinchliffe
+- GitHub: https://github.com/AbigailHinchliffe
